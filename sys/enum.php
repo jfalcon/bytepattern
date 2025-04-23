@@ -1,0 +1,69 @@
+<?php
+
+namespace System;
+
+/*/
+/ / Example Usage:
+/ /
+/ / abstract class DaysOfWeek extends \System\Enumeration
+/ / {
+/ /     const Sunday = 0;
+/ /     const Monday = 1;
+/ /     const Tuesday = 2;
+/ /     const Wednesday = 3;
+/ /     const Thursday = 4;
+/ /     const Friday = 5;
+/ /     const Saturday = 6;
+/ / }
+/*/
+
+// this offers a bit more functionality than SplEnum and doesn't require object construction
+abstract class Enumeration
+{
+    private static $_constCache = null;
+
+    //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    ///////////////////////////////////////////////////////////////// PUBLIC ROUTINES ////////////////////////////////////////////////////////////////
+    //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+    public static function isValidName($name, $strict = false)
+    {
+        $constants = self::__getConstants();
+        $name = trim($name);
+
+        if ($strict)
+            // array_key_exists() is slower
+            return @isset($constants[$name]);
+        else
+        {
+            // using array_key_exists() is slower
+            $keys = array_map('strtolower', array_keys($constants));
+            return @isset($keys[$name]);
+        }
+    }
+
+    //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+    public static function isValidValue($value)
+    {
+        $values = array_values(self::__getConstants());
+        return in_array($value, $values, true);
+    }
+
+    //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    //////////////////////////////////////////////////////////////// PRIVATE ROUTINES ////////////////////////////////////////////////////////////////
+    //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+    private static function __getConstants()
+    {
+        if(self::$_constCache === null)
+        {
+            $reflect = new \ReflectionClass(get_called_class());
+            self::$_constCache = $reflect->getConstants();
+        }
+
+        return self::$_constCache;
+    }
+}
+
+?>

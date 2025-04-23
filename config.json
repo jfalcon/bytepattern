@@ -1,0 +1,29 @@
+<?xml version="1.0" standalone="yes" ?>
+<bytepattern>
+    <application>
+        <language>en-us</language>
+        <locale>en_US</locale>
+        <name>My Application</name>
+        <version>1.0</version>
+    </application>
+    <environment host="www.dev.local">
+        <debug>true</debug>
+        <cache enable="false">
+            <ignore>something</ignore>
+        </cache>
+        <admin>
+            <name>John Doe</name>
+            <email>john.doe@company.com</email>
+        </admin>
+        <database>
+            <username>dbuser</username>
+            <password>dbpass</password>
+            <server>db.dev.local</server>
+        </database>
+    </environment>
+    <custom host="www.dev.local">
+        <copyright>2014</copyright>
+        <company>My Company, Inc.</company>
+        <id>custom_stuff</id>
+    </custom>
+</bytepattern>

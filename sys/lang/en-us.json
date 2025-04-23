@@ -1,0 +1,97 @@
+{
+    "entries": [
+        {
+            "key": "callstack",
+            "text": "Call Stack"
+        },
+        {
+            "key": "errcli",
+            "text": "This script must be executed via a command line."
+        },
+        {
+            "key": "errordb",
+            "text": "Database Error"
+        },
+        {
+            "key": "errorphp",
+            "text": "PHP Error"
+        },
+        {
+            "key": "errornum",
+            "text": "Reference Number"
+        },
+        {
+            "key": "errortitle",
+            "text": "System Error"
+        },
+        {
+            "key": "exceptionphp",
+            "text": "PHP Exception"
+        },
+        {
+            "key": "errormessage",
+            "text": "An error occurred while processing your request."
+        },
+        {
+            "key": "file",
+            "text": "File"
+        },
+        {
+            "key": "linenum",
+            "text": "Line Number"
+        },
+        {
+            "key": "location",
+            "text": "Location"
+        },
+        {
+            "key": "maintenance",
+            "text": "Server Down for Scheduled Maintenance"
+        },
+        {
+            "key": "noerror",
+            "text": "No error message was reported."
+        },
+        {
+            "key": "noscript",
+            "text": "Enable JavaScript"
+        },
+        {
+            "key": "notfoundtitle",
+            "text": "Resource Not Found"
+        },
+        {
+            "key": "notfoundmessage",
+            "text": "The resource you are looking for is unavailable."
+        },
+        {
+            "key": "oldieversion",
+            "text": "You must upgrade Internet Explorer to version 9 or better. \
+            \n\nWould you like to be taken to a download page?"
+        },
+        {
+            "key": "poweredby",
+            "text": "Powered By {%BP_SYS_NAME%} {%BP_SYS_VER%}"
+        },
+        {
+            "key": "promptcache",
+            "text": "Running this script will remove all files in the system's output cache directory."
+        },
+        {
+            "key": "promptconfirm",
+            "text": "Are you sure you wish to continue? (yes/no): "
+        },
+        {
+            "key": "promptmin",
+            "text": "Running this script will remove all files in the system's minimization cache for the application."
+        },
+        {
+            "key": "sysadmin",
+            "text": "System Administrator"
+        },
+        {
+            "key": "systime",
+            "text": "System Time"
+        }
+    ]
+}
